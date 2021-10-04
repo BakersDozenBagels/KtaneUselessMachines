@@ -23,6 +23,7 @@ public class UselessMachinesScript : MonoBehaviour
     private static int _moduleIdCounter = 1;
     private bool _moduleSolved;
     private bool _canFlip;
+    private int animIx = -1;
 
     private void Start()
     {
@@ -53,7 +54,8 @@ public class UselessMachinesScript : MonoBehaviour
         }
         SwitchObj.transform.localEulerAngles = new Vector3(70f, 0f, 0f);
         yield return new WaitForSeconds(2f);
-        int animIx = Rnd.Range(0, 2);
+        //int animIx = Rnd.Range(0, 2);
+        animIx++;
         if (animIx == 0)
             StartCoroutine(ShakeModule());
         if (animIx == 1)
@@ -72,25 +74,32 @@ public class UselessMachinesScript : MonoBehaviour
         }
         FullModule.transform.localEulerAngles = new Vector3(20f, 0f, 0f);
         yield return new WaitForSeconds(0.5f);
-        var durationSecond = 0.2f;
+        var durationSecond = 0.1f;
         var elapsedSecond = 0f;
         while (elapsedSecond < durationSecond)
         {
-            FullModule.transform.localEulerAngles = new Vector3(Easing.OutQuad(elapsedSecond, 20f, -20f, durationSecond), 0f, 0f);
-            SwitchObj.transform.localEulerAngles = new Vector3(Easing.InOutQuad(elapsedSecond, 70f, -70f, durationSecond), 0f, 0f);
+            FullModule.transform.localEulerAngles = new Vector3(Mathf.Lerp(20f, -20f, elapsedSecond / durationSecond), 0f, 0f);
             yield return null;
             elapsedSecond += Time.deltaTime;
         }
         FullModule.transform.localEulerAngles = new Vector3(-20f, 0f, 0f);
-        SwitchObj.transform.localEulerAngles = new Vector3(-70f, 0f, 0f);
-        yield return new WaitForSeconds(0.5f);
-        var durationThird = 0.5f;
+        var durationThird = 0.1f;
         var elapsedThird = 0f;
         while (elapsedThird < durationThird)
         {
-            FullModule.transform.localEulerAngles = new Vector3(Easing.OutQuad(elapsedThird, -20f, 0f, durationThird), 0f, 0f);
+            SwitchObj.transform.localEulerAngles = new Vector3(Mathf.Lerp(70f, -70f, elapsedThird / durationThird), 0f, 0f);
             yield return null;
             elapsedThird += Time.deltaTime;
+        }
+        SwitchObj.transform.localEulerAngles = new Vector3(-70f, 0f, 0f);
+        yield return new WaitForSeconds(0.5f);
+        var durationFourth = 0.5f;
+        var elapsedFourth = 0f;
+        while (elapsedFourth < durationFourth)
+        {
+            FullModule.transform.localEulerAngles = new Vector3(Easing.InOutQuad(elapsedFourth, -20f, 0f, durationFourth), 0f, 0f);
+            yield return null;
+            elapsedFourth += Time.deltaTime;
         }
         FullModule.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
         yield return new WaitForSeconds(0.2f);
@@ -99,7 +108,7 @@ public class UselessMachinesScript : MonoBehaviour
 
     private IEnumerator FormClampHand()
     {
-        var durationFirst = 0.7f;
+        var durationFirst = 0.3f;
         var elapsedFirst = 0f;
         while (elapsedFirst < durationFirst)
         {
@@ -115,7 +124,7 @@ public class UselessMachinesScript : MonoBehaviour
         ClampArmTop.transform.localPosition = new Vector3(0f, 0.015f, 0f);
         ClampArmHand.transform.localPosition = new Vector3(-0.04f, 0f, 0.04f);
         yield return new WaitForSeconds(0.5f);
-        var durationSecond = 1f;
+        var durationSecond = 0.7f;
         var elapsedSecond = 0f;
         while (elapsedSecond < durationSecond)
         {
@@ -133,8 +142,8 @@ public class UselessMachinesScript : MonoBehaviour
         ClampArmMiddle.transform.localPosition = new Vector3(-0.0284f, 0.015f, -0.035f);
         ClampArmTop.transform.localPosition = new Vector3(0f, 0.015f, 0.075f);
         ClampArmHand.transform.localPosition = new Vector3(-0.079f, 0f, 0.095f);
-        yield return new WaitForSeconds(1f);
-        var durartionThird = 1f;
+        yield return new WaitForSeconds(0.5f);
+        var durartionThird = 0.7f;
         var elapsedThird = 0f;
         while (elapsedThird < durartionThird)
         {
@@ -142,7 +151,7 @@ public class UselessMachinesScript : MonoBehaviour
             yield return null;
             elapsedThird += Time.deltaTime;
         }
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.3f);
         var durationFourth = 0.1f;
         var elapsedFourth = 0f;
         while (elapsedFourth < durationFourth)
@@ -171,8 +180,8 @@ public class UselessMachinesScript : MonoBehaviour
             elapsedSixth += Time.deltaTime;
         }
         ClampArmHandParent.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
-        yield return new WaitForSeconds(1f);
-        var durationSeventh = 1f;
+        yield return new WaitForSeconds(0.5f);
+        var durationSeventh = 0.5f;
         var elapsedSeventh = 0f;
         while (elapsedSeventh < durationSeventh)
         {
@@ -191,7 +200,7 @@ public class UselessMachinesScript : MonoBehaviour
         ClampArmTop.transform.localPosition = new Vector3(0f, 0.015f, 0);
         ClampArmHand.transform.localPosition = new Vector3(-0.04f, 0, 0.04f);
         yield return new WaitForSeconds(0.5f);
-        var durationEighth = 0.7f;
+        var durationEighth = 0.3f;
         var elapsedEighth = 0f;
         while (elapsedEighth < durationEighth)
         {
