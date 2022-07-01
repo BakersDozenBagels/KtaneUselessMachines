@@ -358,6 +358,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4227853366066670, guid: a444eb7cd8ace0c4399ed5182572e2d1, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1828251488054954, guid: a444eb7cd8ace0c4399ed5182572e2d1, type: 2}
+      propertyPath: m_Name
+      value: StatusLightFull
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a444eb7cd8ace0c4399ed5182572e2d1, type: 2}
   m_IsPrefabParent: 0

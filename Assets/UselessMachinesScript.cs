@@ -13,11 +13,14 @@ public class UselessMachinesScript : MonoBehaviour
     public GameObject SwitchObj;
 
     public GameObject FullModule;
+
     public GameObject ClampArmBottom;
     public GameObject ClampArmMiddle;
     public GameObject ClampArmTop;
     public GameObject ClampArmHand;
     public GameObject ClampArmHandParent;
+
+    public GameObject StatusCopterBody;
 
     private int _moduleId;
     private static int _moduleIdCounter = 1;
@@ -35,9 +38,7 @@ public class UselessMachinesScript : MonoBehaviour
     private bool MoveSwitch()
     {
         if (_canFlip)
-        {
             StartCoroutine(FlipSwitchUp());
-        }
         return false;
     }
 
