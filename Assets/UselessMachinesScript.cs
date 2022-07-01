@@ -22,6 +22,8 @@ public class UselessMachinesScript : MonoBehaviour
 
     public GameObject StatusCopterBody;
 
+    public Animator Animation;
+
     private int _moduleId;
     private static int _moduleIdCounter = 1;
     private bool _moduleSolved;
@@ -40,6 +42,12 @@ public class UselessMachinesScript : MonoBehaviour
         if (_canFlip)
             StartCoroutine(FlipSwitchUp());
         return false;
+    }
+
+    public void ResetAnim()
+    {
+        _canFlip = true;
+        SwitchObj.transform.localEulerAngles = new Vector3(-70f, 0f, 0f);
     }
 
     private IEnumerator FlipSwitchUp()
@@ -61,6 +69,8 @@ public class UselessMachinesScript : MonoBehaviour
             StartCoroutine(ShakeModule());
         if (animIx == 1)
             StartCoroutine(FormClampHand());
+        if(animIx == 2)
+            Animation.SetTrigger("TopDoor");
     }
 
     private IEnumerator ShakeModule()

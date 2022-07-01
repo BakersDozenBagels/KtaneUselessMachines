@@ -1,31 +1,37 @@
 fileFormatVersion: 2
-guid: a63e76d550cc75d46beb75e0c1dad5b4
+guid: 8a8a500e62b04d74b813bfc6454bc6d4
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: default
-    100004: ModelComponent
-    400000: //RootNode
-    400002: default
-    400004: ModelComponent
-    2300000: default
-    2300002: ModelComponent
-    3300000: default
-    3300002: ModelComponent
-    4300000: default
-    4300002: ModelComponent
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: ModelComponentMat
-    second: {fileID: 2100000, guid: 06ddcf94a363f6e4ca5ef88ed8d08989, type: 2}
+    100000: CINEMA_4D_Editor
+    100002: //RootNode
+    100004: "P\xEDst"
+    100006: "P\xEDstHead"
+    400000: CINEMA_4D_Editor
+    400002: //RootNode
+    400004: "P\xEDst"
+    400006: "P\xEDstHead"
+    2000000: CINEMA_4D_Editor
+    2100000: side_vert
+    2100002: side_hor
+    2100004: sticky
+    2100006: middle
+    2100008: side
+    2100010: inner
+    2100012: No Name
+    2300000: "P\xEDst"
+    2300002: "P\xEDstHead"
+    3300000: "P\xEDst"
+    3300002: "P\xEDstHead"
+    4300000: "P\xEDst"
+    4300002: "P\xEDstHead"
+    9500000: //RootNode
+  externalObjects: {}
   materials:
     importMaterials: 0
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -64,7 +70,7 @@ ModelImporter:
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
-    indexFormat: 1
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
@@ -74,8 +80,8 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
-    normalCalculationMode: 0
-  importAnimation: 1
+    normalCalculationMode: 4
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
@@ -91,8 +97,8 @@ ModelImporter:
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 0
-    skeletonHasParents: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 0
   humanoidOversampling: 1
