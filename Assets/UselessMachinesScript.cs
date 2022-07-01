@@ -65,12 +65,19 @@ public class UselessMachinesScript : MonoBehaviour
         yield return new WaitForSeconds(2f);
         //int animIx = Rnd.Range(0, 2);
         animIx++;
+
+        animIx = 4;
+
         if (animIx == 0)
             StartCoroutine(ShakeModule());
         if (animIx == 1)
             StartCoroutine(FormClampHand());
         if(animIx == 2)
             Animation.SetTrigger("TopDoor");
+        if(animIx == 3)
+            Animation.SetTrigger("Speen");
+        if(animIx == 4)
+            Animation.SetTrigger("Flip");
     }
 
     private IEnumerator ShakeModule()

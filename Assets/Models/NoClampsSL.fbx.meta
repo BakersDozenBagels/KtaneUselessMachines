@@ -6,17 +6,34 @@ ModelImporter:
     100000: ModelComponent
     100002: ModelComponentDoor
     100004: //RootNode
+    100006: Cube
+    100008: Empty
+    100010: ModelComponentDooraasdaWSDfw
+    100012: ModelComponentDoorMiddle
     400000: ModelComponent
     400002: ModelComponentDoor
     400004: //RootNode
+    400006: Cube
+    400008: Empty
+    400010: ModelComponentDooraasdaWSDfw
+    400012: ModelComponentDoorMiddle
     2100000: Default OBJ
     2100002: Default OBJ.001
     2300000: ModelComponent
     2300002: ModelComponentDoor
+    2300004: Cube
+    2300006: ModelComponentDooraasdaWSDfw
+    2300008: ModelComponentDoorMiddle
     3300000: ModelComponent
     3300002: ModelComponentDoor
+    3300004: Cube
+    3300006: ModelComponentDooraasdaWSDfw
+    3300008: ModelComponentDoorMiddle
     4300000: ModelComponent
     4300002: ModelComponentDoor
+    4300004: ModelComponentDooraasdaWSDfw
+    4300006: Cube
+    4300008: ModelComponentDoorMiddle
   externalObjects: {}
   materials:
     importMaterials: 0
