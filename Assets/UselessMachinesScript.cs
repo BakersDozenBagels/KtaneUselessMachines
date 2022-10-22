@@ -66,7 +66,7 @@ public class UselessMachinesScript : MonoBehaviour
         //int animIx = Rnd.Range(0, 2);
         animIx++;
 
-        animIx = 4;
+        //animIx = 4;
 
         if (animIx == 0)
             StartCoroutine(ShakeModule());
